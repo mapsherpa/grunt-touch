@@ -29,7 +29,7 @@ module.exports = function(grunt) {
 
     // Iterate over all specified file groups.
     grunt.util.async.every(this.files, function(file, next) {
-      grunt.util.async.every(file.orig.src, function(f) {
+      grunt.util.async.every(file.src, function(f) {
         grunt.verbose.writeln('touching ' + f);
         if (!grunt.file.exists(f)) {
           grunt.file.mkdir(path.dirname(f));
